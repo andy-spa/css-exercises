@@ -1,10 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
+  display: flex;
+  flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
 }
 
 .header {
+  font-size: 32px;
+  font-weight: 900;
   height: 72px;
   background: darkmagenta;
   color: white;
@@ -15,15 +23,54 @@ body {
   background: #eee;
   color: darkmagenta;
 }
-
+.content{
+  display: flex;
+  flex: 1;
+}
 .sidebar {
-  width: 300px;
+  order: -1;
+  flex: 1 0 300px;
   background: royalblue;
   box-sizing: border-box;
 }
-
+.card-container{
+  padding: 32px;
+  display: flex;
+  flex-wrap:wrap;
+}
 .card {
+  
+  width: 300px;
+  padding: 16px;
+  margin: 16px;
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+.header{
+  padding-left: 16px;
+  display: flex;
+  flex: 0 0 72px;
+  order: -2;
+  align-items: center;
+}
+ul{
+  list-style: none;
+}
+li{
+  margin-bottom: 16px;
+}
+.sidebar{
+  padding: 16px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
